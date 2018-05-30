@@ -89,7 +89,25 @@ class ViewController: UIViewController {
          在debugger中可以修改view的颜色、尺寸、甚至创建controller来push
          ex: expression testView.backgroundColor = UIColor.red
          
-         8.watchpont
+         8.watchpoint
+         watchpoint可以在某个变量被写入/读取时暂停程序运行：
+         实际上可以使用watchpoint来监视任意一段内存的读写。
+         写到内存的时候 可以试下
+         
+         
+         9.断点符号.在 Add symbolic breakpoint中填入符号名即可，
+         
+         这里给出objective-c的函数符号断点的写法：
+         -[MyViewController viewDidAppear:]
+         +[MyViewController sharedInstance]
+         
+         10.查看内存
+         使用XCode的可视化工具来查看memory，要注意watch memory of "p" 和watch memory of "*p"的区别。
+         手动执行命令可以help x或者 help memory。
+         
+         小结
+         
+         lldb的用法很灵活多样，但是XCode的可视化调试工具覆盖面有限，一些高级用法仍需手动输入命令，甚至结合python脚本。
          
          */
         
